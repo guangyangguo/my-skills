@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-email-digest",
+      "name": "每日邮件摘要",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "/skill email_monitor",
+        "deliver": true,
+        "channel": "weixin",
+        "to": "YOUR_WEIXIN_USER_ID"
+      },
+      "state": {
+        "nextRunAtMs": null,
+        "lastRunAtMs": null,
+        "lastStatus": null,
+        "lastError": null,
+        "runHistory": []
+      },
+      "createdAtMs": 0,
+      "updatedAtMs": 0,
+      "deleteAfterRun": false
+    }
+  ]
+}

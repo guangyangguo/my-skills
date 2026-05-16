@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-wechat-article-digest",
+      "name": "每日公众号文章摘要",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "57 17 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "/skill wechat-article-monitor",
+        "deliver": true,
+        "channel": "weixin",
+        "to": "YOUR_WEIXIN_USER_ID"
+      },
+      "state": {
+        "nextRunAtMs": null,
+        "lastRunAtMs": null,
+        "lastStatus": null,
+        "lastError": null,
+        "runHistory": []
+      },
+      "createdAtMs": 0,
+      "updatedAtMs": 0,
+      "deleteAfterRun": false
+    }
+  ]
+}
