@@ -1,6 +1,6 @@
 # NanoBot Skills
 
-基于 [NanoBot](https://github.com/nanoboop/nanobot) 的个人 skill 集合，通过 LLM + 定时任务实现每日邮件摘要和公众号文章监控，结果通过微信推送。
+基于 [NanoBot](https://github.com/HKUDS/nanobot) 的个人 skill 集合，通过 LLM + 定时任务实现每日邮件摘要和公众号文章监控，结果通过微信推送。
 
 ## 已有 Skills
 
@@ -12,7 +12,7 @@
 ## 前置条件
 
 - Python 3.10+
-- [NanoBot](https://github.com/nanoboop/nanobot) 已安装且 weixin channel 已配置
+- [NanoBot](https://github.com/HKUDS/nanobot) 已安装且 weixin channel 已配置
 - LLM API key（DeepSeek / OpenAI / Anthropic 等，在 `~/.nanobot/config.json` 中配置）
 - **email-monitor**：邮箱需开启 IMAP（Gmail 需使用应用专用密码）
 - **wechat-article-monitor**：Docker 运行 [wewe-rss](https://github.com/cooderl/wewe-rss) 服务（`localhost:4000`）
